@@ -61,8 +61,8 @@ stages {
      }
     stage('Deploy War') {
       steps {
-        //sh label: '', script: 'ansible-playbook deploy.yml'
-          deploy adapters: [tomcat8(credentialsId: '0123', path: '', url: 'http://35.154.91.49:8080/manager/html')], contextPath: 'goldeployment', war: '**/*.war'
+        sh label: '', script: 'ansible-playbook deploy.yml'
+          //deploy adapters: [tomcat8(credentialsId: '0123', path: '', url: 'http://35.154.91.49:8080/manager/html')], contextPath: 'goldeployment', war: '**/*.war'
       }
  }
 }
