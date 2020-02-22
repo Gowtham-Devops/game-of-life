@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: Stop Tomcat
-    command: /apache-tomcat-8.5.51/bin/./shutdown.sh
+    shell: /etc/init.d/tomcatstop
   - name: Clean the existing war file
     file:
       path: /apache-tomcat-8.5.51/webapps/gameoflife.war
@@ -13,5 +13,5 @@
        url: http://13.127.6.58:8081/nexus/service/local/artifact/maven/redirect?r=releases&g=com.wakaleo.gameoflife&a=gameoflife1&p=war&v=LATEST
        dest: /apache-tomcat-8.5.51/webapps/gameoflife.war
   - name: Start Tomcat
-    command: /apache-tomcat-8.5.51/bin/./startup.sh
+    shell: /etc/init.d/tomcatstart
  
