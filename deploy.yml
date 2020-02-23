@@ -3,11 +3,7 @@
   become: true
   tasks:
   - name: Stop Tomcat
-    shell: /apache-tomcat-8.5.51/bin/shutdown.sh
-  - name: Clean the existing war file
-    file:
-      path: /apache-tomcat-8.5.51/webapps/gameoflife.war
-      state: present   
+    shell: /apache-tomcat-8.5.51/bin/shutdown.sh 
   - name: Start Tomcat
     shell: /apache-tomcat-8.5.51/bin/startup.sh
  
