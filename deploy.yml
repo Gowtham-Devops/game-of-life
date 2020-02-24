@@ -15,5 +15,5 @@
        notify: retsart tomcat
   handlers:
   - name: restart tomcat
-  service: name=tomcat state=restarted
+    service: name=tomcat state=restarted
  
