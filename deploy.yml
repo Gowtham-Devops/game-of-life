@@ -12,7 +12,7 @@
     get_url:
        url: http://13.127.6.58:8081/nexus/service/local/artifact/maven/redirect?r=releases&g=com.wakaleo.gameoflife&a=gameoflife1&p=war&v=LATEST
        dest: /apache-tomcat-8.5.51/webapps/gameoflife.war
-       notify: retsart tomcat
+    notify: retsart tomcat
   handlers:
   - name: restart tomcat
     service: name=tomcat state=restarted
